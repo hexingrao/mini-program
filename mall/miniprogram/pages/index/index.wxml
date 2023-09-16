@@ -1,23 +1,26 @@
-<!--index.wxml-->
-<view class="container">
-  <view class="userinfo">
-    <block wx:if="{{canIUseOpenData}}">
-      <view class="userinfo-avatar" bindtap="bindViewTap">
-        <open-data type="userAvatarUrl"></open-data>
-      </view>
-      <open-data type="userNickName"></open-data>
-    </block>
-    <block wx:elif="{{!hasUserInfo}}">
-      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
-      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
-    </block>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
+<view>
+  <!-- 搜索框 -->
+  <search></search>
+
+  <!-- 轮播图 -->
+  <view class="index_swiper">
+    <swiper>
+    <swiper-item>
+      <navigator>
+        <image mode="widthFix" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/7bfda2a88bc0ce1f17b44cce285be2d4.jpg?thumb=1&w=1226&h=460&f=webp&q=90"></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item>
+      <navigator>
+        <image mode="widthFix" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/da7c749aa3ce4f675ad44d7ca80ad749.jpg?thumb=1&w=1226&h=460&f=webp&q=90"></image>
+      </navigator>
+    </swiper-item>
+    <swiper-item>
+      <navigator>
+        <image mode="widthFix" src="https://cdn.cnbj1.fds.api.mi-img.com/mi-mall/9034851fcd3bc61cb20046934cc4b14a.jpg?thumb=1&w=1226&h=460&f=webp&q=90"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
   </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+  
 </view>

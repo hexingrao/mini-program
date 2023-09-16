@@ -1,0 +1,19 @@
+.search {
+  height: 90rpx;
+  padding: 10rpx;
+  background-color: var(--themeColor);
+}
+
+.search navigator {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  background-color: #fff;
+  border-radius: 15rpx;
+}
+
+.search navigator icon {
+  padding-right: 5rpx;
+}
